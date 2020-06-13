@@ -2,7 +2,8 @@ class ChatroomController < ApplicationController
     before_action :require_user
 
     def index
-        @messages = Message.all.order("created_at DESC")
+        @message = Message.new
+        @messages = Message.custom_disply
     end
 
     
